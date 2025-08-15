@@ -14,20 +14,22 @@ module.exports = {
         rules: [
             {
                 // Transpile JavaScript and JSX files
-                test: /\.jsx?$/, 
+                test: /.jsx?$/, 
                 // Exclude node_modules from transpilation
                 exclude: /node_modules/, 
                 use: {
                     loader: 'babel-loader',
                     options: {
                         // Use Babel presets for transforming modern JavaScript and React
-                        presets: ['@babel/preset-env', '@babel/preset-react']
+                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        // Optional: Add comments to output files
+                        comments: false
                     }
                 }
             },
             {
                 // Process CSS files
-                test: /\.css$/, 
+                test: /.css$/, 
                 use: ['style-loader', 'css-loader']
             }
         ]
