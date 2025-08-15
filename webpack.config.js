@@ -14,7 +14,7 @@ module.exports = {
         rules: [
             {
                 // Transpile JavaScript and JSX files
-                test: /.jsx?$/, 
+                test: /\.(js|jsx)$/, 
                 // Exclude node_modules from transpilation
                 exclude: /node_modules/, 
                 use: {
