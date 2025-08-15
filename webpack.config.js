@@ -29,7 +29,7 @@ module.exports = {
             },
             {
                 // Process CSS files
-                test: /.css$/, 
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             }
         ]
