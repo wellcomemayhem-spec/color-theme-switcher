@@ -1,0 +1,29 @@
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.sea {
+    background-color: #007f7f;
+    color: #ffffff;
+}
+
+.theme-switcher {
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
