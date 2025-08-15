@@ -5,6 +5,7 @@ module.exports = {
     entry: './src/index.js',
     // Output configuration
     output: {
+        // Output directory and filename for the bundled files
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
@@ -14,10 +15,12 @@ module.exports = {
             {
                 // Transpile JavaScript and JSX files
                 test: /\.jsx?$/, 
+                // Exclude node_modules from transpilation
                 exclude: /node_modules/, 
                 use: {
                     loader: 'babel-loader',
                     options: {
+                        // Use Babel presets for transforming modern JavaScript and React
                         presets: ['@babel/preset-env', '@babel/preset-react']
                     }
                 }
@@ -29,14 +32,17 @@ module.exports = {
             }
         ]
     },
-    // Resolve file extensions
+    // Resolve file extensions for import statements
     resolve: {
         extensions: ['.js', '.jsx']
     },
     // Development server configuration
     devServer: {
+        // Specify the content base directory
         contentBase: path.join(__dirname, 'dist'),
+        // Enable gzip compression for assets
         compress: true,
+        // Port for the server
         port: 9000,
     },
 };
